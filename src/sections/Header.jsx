@@ -17,7 +17,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen((prevState) => !prevState);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-100 py-10">
+    <header className="fixed top-0 left-0 w-full z-10 py-10">
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="lg:hidden flex-1 cursor-pointer z-2 ">
           <div className="flex justify-left items-center p-1 gap-2">
@@ -47,14 +47,14 @@ const Header = () => {
                   <div className="dot" />
                   <NavLink title="Pricing" />
                 </li>
-                <li className="nav-logo flex gap-2">
+                <li className="nav-logo">
                   <LinkScroll
                     to="hero"
                     offset={-100}
                     spy
                     smooth
                     className={clsx(
-                      "max-lg:hidden transition-transform duration-500 cursor-pointer"
+                      "max-lg:hidden transition-transform duration-500 cursor-pointer flex gap-4 items-center"
                     )}
                   >
                     <img
