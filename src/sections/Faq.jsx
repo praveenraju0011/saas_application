@@ -19,7 +19,7 @@ const Faq = () => {
           </div>
           <div className="faq-line_after w-0.5 h-full absolute left-[calc(50%-1px)] top-0 -z-1 bg-s2"></div>
           <div className="fag-glow_before relative z-2 border-2 border-s2 bg-s1">
-            <div className="container flex-gap-10 max-lg:block">
+            <div className="container flex gap-10 max-lg:block">
               <div
                 className="rounded-half absolute -top-10 left-[calc(50%-40px)] z4 flex size-20
               items-center justify-center border-2 border-s2 bg-s1"
@@ -30,19 +30,18 @@ const Faq = () => {
                   className="size-1/2"
                 />
               </div>
-              <div className="container flex justify-evenly gap-4">
-                <div className="relative flex-1 pt-24">
-                  {faq.slice(0, faqHalfLength).map((item) => (
-                    <FaqItem key={item.id} index={item.id} item={item} />
-                  ))}
-                </div>
-                <div className="relative flex-1 pt-24">
-                  {faq.slice(faqHalfLength).map((item) => (
-                    <FaqItem key={item.id} index={item.id} item={item} />
-                  ))}
-                </div>
+              <div className="relative flex-1 pt-24">
+                {faq.slice(0, faqHalfLength).map((item) => (
+                  <FaqItem key={item.id} index={item.id} item={item} />
+                ))}
+              </div>
+              <div className="relative flex-1 lg:pt-24">
+                {faq.slice(faqHalfLength).map((item) => (
+                  <FaqItem key={item.id} index={item.id} item={item} />
+                ))}
               </div>
             </div>
+            <div className="faq-lin_after absolute left-[calc(50%-1px)] top-0 -z-1 h-full w-0.5 bg-s2 max-lg:hidden" />
           </div>
         </div>
       </Element>
